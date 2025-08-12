@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Updated title for automotive business -->
+    <title>Redstone Automotives - Professional Auto Services</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <!-- Updated styles with brick red theme, removed intro video, added background video, animations, and sitemap -->
+    <style>
+        :root {
+            --primary-color: #B22222; 
+            --primary-dark: #8B1A1A;
+            --primary-light: #CD5C5C;
+        }
+
+        /* Override ALL green colors with brick red */
+        .filled-button, .main-banner .filled-button {
+            background-color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color) !important;
+            transition: all 0.3s ease;
+        }
+
+            .filled-button:hover {
+                background-color: var(--primary-dark) !important;
+                border: 2px solid var(--primary-dark) !important;
+                transform: translateY(-2px);
+            }
+
+        .section-heading h2 em {
+            color: var(--primary-color) !important;
+        }
+
+        .navbar-brand h2 {
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link.current, .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #f5f5f5 !important;
+            font-weight: 500;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #dc3545 !important;
+                font-weight: bold !important;
+                font-size: 1.1em !important;
+                transform: scale(1.05);
+                transition: all 0.3s ease;
+            }
+
+        .count-digit {
+            color: var(--primary-color) !important;
+        }
+
+        .service-item .filled-button {
+            background-color: var(--primary-color) !important;
+        }
+
+        /* Additional brick red overrides */
+        .more-info .filled-button, .testimonials .filled-button,
+        .partners .filled-button, footer .filled-button {
+            background-color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color) !important;
+        }
+
+            .more-info .filled-button:hover, .testimonials .filled-button:hover,
+            .partners .filled-button:hover, footer .filled-button:hover {
+                background-color: var(--primary-dark) !important;
+                border: 2px solid var(--primary-dark) !important;
+            }
+
+        /* Override any remaining green elements */
+        .main-banner .item .text-content .filled-button,
+        .services .service-item .filled-button,
+        .fun-facts .filled-button,
+        .more-info .right-content .filled-button {
+            background-color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color) !important;
+        }
+
+        /* Updated header background to brick red */
+        .sub-header {
+            background-color: var(--primary-color) !important;
+            color: white;
+        }
+
+            .sub-header a {
+                color: white !important;
+            }
+
+                .sub-header a:hover {
+                    color: #f0f0f0 !important;
+                }
+
+        /* Added background video styles for home section */
+        .main-banner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .main-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .main-banner .Modern-Slider {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Updated service hover effects - removed transparent overlay, added normal hover */
+        .service-item {
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+            .service-item:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(178, 34, 34, 0.3);
+            }
+
+            /* Added hover animations for services */
+            .service-item img {
+                transition: transform 0.3s ease;
+            }
+
+            .service-item:hover img {
+                transform: scale(1.05);
+            }
+
+        /* Added animation for count digits */
+        .count-area-content {
+            transition: all 0.3s ease;
+        }
+
+            .count-area-content:hover {
+                transform: scale(1.1);
+            }
+
+        .count-digit {
+            font-size: 36px;
+            font-weight: bold;
+            animation: countUp 2s ease-out;
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Added styles for Why Redstone section */
+        .why-redstone {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+            .feature-item:hover {
+                background: #f8f9fa;
+                transform: translateY(-5px);
+            }
+
+                .feature-item:hover .feature-icon {
+                    transform: scale(1.1);
+                }
+
+            .feature-item h4 {
+                color: var(--primary-color);
+                margin-bottom: 15px;
+            }
+
+        /* Added styles for mission and vision section */
+        .mission-vision {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+            .mission-vision .row > div {
+                margin-bottom: 30px;
+            }
+
+            .mission-vision h4 {
+                color: var(--primary-color);
+                margin-bottom: 15px;
+            }
+
+        /* WhatsApp Widget Styles */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            border-radius: 50px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-weight: 500;
+        }
+
+            .whatsapp-widget:hover {
+                background-color: #128C7E;
+                transform: scale(1.05);
+                text-decoration: none;
+                color: white;
+            }
+
+        .whatsapp-icon {
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-widget {
+                padding: 12px;
+                border-radius: 50%;
+            }
+
+            .whatsapp-text {
+                display: none;
+            }
+        }
+
+        /* Added sitemap styles */
+        .sitemap-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+            .sitemap-item:hover {
+                background: var(--primary-color);
+                color: white;
+                transform: translateX(5px);
+            }
+
+            .sitemap-item a {
+                color: inherit;
+                text-decoration: none;
+                display: block;
+            }
+
+            .sitemap-item:hover a {
+                color: white;
+            }
+
+        /* Added general animations */
+        .section-heading {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Added Our Values section styles */
+        .our-values {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/placeholder.svg?height=600&width=1200') center/cover;
+            padding: 100px 0;
+            color: white;
+        }
+
+            .our-values .section-heading h2,
+            .our-values .section-heading span {
+                color: white;
+            }
+
+                .our-values .section-heading h2 em {
+                    color: var(--primary-color) !important;
+                }
+
+        .value-item {
+            text-align: center;
+            padding: 30px 15px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+            .value-item:hover {
+                background: rgba(255,255,255,0.1);
+                transform: translateY(-10px);
+            }
+
+            .value-item i {
+                transition: all 0.3s ease;
+            }
+
+            .value-item:hover i {
+                transform: scale(1.2);
+                color: var(--primary-light) !important;
+            }
+
+            .value-item h5 {
+                color: white;
+                margin: 15px 0 10px 0;
+                font-weight: 600;
+            }
+
+            .value-item p {
+                color: #ccc;
+                font-size: 14px;
+            }
+
+        /* Added standalone map section styles */
+        .map-container:hover {
+            transform: translateY(-5px);
+            background: var(--primary-color) !important;
+        }
+
+            .map-container:hover i,
+            .map-container:hover h5,
+            .map-container:hover p {
+                color: white !important;
+            }
+
+        /* Added CSS for running brand logos animation */
+        .logos-slider {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .logos-track {
+            display: inline-flex;
+            animation: scroll 20s linear infinite;
+        }
+
+        .logo-item {
+            flex: 0 0 auto;
+            margin: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .logo-item img {
+                height: 80px;
+                width: auto;
+                max-width: 120px;
+                object-fit: contain;
+                filter: grayscale(100%);
+                opacity: 0.7;
+                transition: all 0.3s ease;
+            }
+
+            .logo-item:hover img {
+                filter: grayscale(0%);
+                opacity: 1;
+                transform: scale(1.1);
+            }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logos-slider:hover .logos-track {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Updated header background to brick red -->
+    <div class="sub-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-xs-12">
+                    <ul class="left-info">
+                        <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 09:00-17:00</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i>090-080-0760</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="right-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Changed company name to logo -->
+                <a class="navbar-brand" href="one-page.html">
+                    <img src="/placeholder.svg?height=50&width=200" alt="Redstone Automotives" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link current" href="#top">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#values">Our Values</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Get in Touch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner with background video -->
+    <div class="main-banner header-text" id="top">
+        <video autoplay muted loop class="background-video">
+            <source src="/placeholder.mp4?query=professional automotive workshop with mechanics servicing cars and modern equipment" type="video/mp4">
+        </video>
+        <div class="Modern-Slider">
+            <div class="item item-1">
+                <div class="img-fill">
+                    <div class="text-content">
+                        <!-- Updated banner content for automotive services -->
+                        <h6>we are ready to help you</h6>
+                        <h4>Professional Auto<br>&amp; Repair Services</h4>
+                        <p>Your trusted automotive partner providing comprehensive car care services. From routine maintenance to complex repairs, we keep your vehicle running smoothly and safely on the road.</p>
+                        <a href="#services" class="filled-button">our services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Ends Here -->
+    <!-- Services Section -->
+    <div class="services" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <!-- Updated section heading for automotive services -->
+                        <h2>Our <em>Services</em></h2>
+                        <span>Comprehensive automotive solutions for all your vehicle needs</span>
+                    </div>
+                </div>
+                <!-- Updated services with AI images and removed read more buttons -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <!--<img src="/jk.jpg?height=300&width=400" alt="JK Tyre Retreat Plant">-->
+                        <img src="assets/images/jktyre.png" alt="JK tyre">
+                        <div class="down-content">
+                            <h4>JK Tyre - Retreat Plant</h4>
+                            <p>Professional tire retreading services using JK Tyre technology for extended tire life and cost-effective solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="assets/images/jktyre.png" alt="">
+                        <div class="down-content">
+                            <h4>MAN Spares - Spare Parts</h4>
+                            <p>Genuine MAN truck and commercial vehicle spare parts with warranty and expert installation services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="assets/images/jktyre.png" alt="">
+                        <div class="down-content">
+                            <h4>Exide Battery</h4>
+                            <p>Premium Exide automotive batteries with professional installation, testing, and maintenance services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="assets/images/jktyre.png" alt="">
+                        <div class="down-content">
+                            <h4>MPower Tyre Powder</h4>
+                            <p>Eco-friendly tire powder solutions and recycling services for sustainable automotive waste management.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="assets/images/jktyre.png" alt="">
+                        <div class="down-content">
+                            <h4>Airkits - Brakes India</h4>
+                            <p>Advanced air brake systems and components from Brakes India for commercial and heavy-duty vehicles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="assets/images/jktyre.png" alt="">
+                        <div class="down-content">
+                            <h4>Mahindra My Garage</h4>
+                            <p>Authorized Mahindra service center providing genuine parts, expert service, and warranty support.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Tyre Scrap">
+                        <div class="down-content">
+                            <h4>Tyre Scrap</h4>
+                            <p>Professional tire disposal and recycling services with environmental compliance and sustainable practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Battery Scrap">
+                        <div class="down-content">
+                            <h4>Battery Scrap</h4>
+                            <p>Safe battery disposal and recycling services following environmental regulations and safety standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Automotive Solutions">
+                        <div class="down-content">
+                            <h4>Automotive Solutions</h4>
+                            <p>Complete automotive consulting and custom solutions for fleet management and specialized vehicle requirements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <img src="/placeholder.svg?height=300&width=400" alt="CPK">
+                        <div class="down-content">
+                            <h4>CPK</h4>
+                            <p>Specialized CPK automotive components and parts with quality assurance and technical support services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="more-info" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>About <em>Redstone Automotives</em></h2>
+                        <span>Get to know about our automotive expertise</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="left-image">
+                        <img src="/placeholder.svg?height=400&width=600" alt="Our Workshop">
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="right-content">
+                        <!-- Updated about section for automotive business -->
+                        <p>Founded with a passion for automotive excellence, Redstone Automotives has been serving the community for over 15 years. Our state-of-the-art facility and experienced team provide comprehensive automotive services you can trust.<br><br>We pride ourselves on transparent pricing, quality workmanship, and exceptional customer service. Every vehicle that enters our shop receives the same level of care and attention we would give our own.</p>
+                        <a href="#" class="filled-button">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Added mission and vision section -->
+            <div class="mission-vision">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4><i class="fa fa-bullseye" style="color: var(--primary-color); margin-right: 10px;"></i>Our Mission</h4>
+                            <p>To provide exceptional automotive services with integrity, expertise, and customer-focused solutions. We strive to build lasting relationships through honest communication, quality workmanship, and reliable service that exceeds expectations every time.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4><i class="fa fa-eye" style="color: var(--primary-color); margin-right: 10px;"></i>Our Vision</h4>
+                            <p>To be the most trusted automotive service provider in our community, known for innovation, sustainability, and excellence. We envision a future where every customer feels confident and satisfied with their automotive care experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Replaced testimonials section with Why Redstone section -->
+    <div class="why-redstone">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Why <em>Redstone?</em></h2>
+                        <span>Discover what makes us the preferred choice for automotive services</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="fa fa-cogs feature-icon"></i>
+                        <h4>Multiservice Solution</h4>
+                        <p>Complete automotive care under one roof - from routine maintenance to complex repairs.<br>We handle all your vehicle needs with expertise and efficiency.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="fa fa-handshake-o feature-icon"></i>
+                        <h4>Partnerships</h4>
+                        <p>Strong relationships with leading parts suppliers and manufacturers ensure quality components.<br>We work with trusted partners to deliver the best service experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="fa fa-leaf feature-icon"></i>
+                        <h4>Sustainability</h4>
+                        <p>Eco-friendly practices and proper disposal of automotive waste protect our environment.<br>We're committed to sustainable automotive solutions for a greener future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Added Our Values section -->
+    <div class="our-values" id="values">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Our <em>Values</em></h2>
+                        <span>The principles that drive our commitment to excellence</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-shield" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Integrity</h5>
+                        <p>Honest and transparent service in every interaction</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-star" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Excellence</h5>
+                        <p>Delivering superior quality in every service we provide</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-users" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Teamwork</h5>
+                        <p>Collaborative approach to solve complex challenges</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-lightbulb-o" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Innovation</h5>
+                        <p>Embracing new technologies and modern solutions</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-heart" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Care</h5>
+                        <p>Treating every vehicle with attention and respect</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-clock-o" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Reliability</h5>
+                        <p>Consistent service you can depend on every time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Added 6 running brand logos below Our Values section -->
+    <div class="brand-logos" style="background: #f8f9fa; padding: 60px 0; overflow: hidden;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading text-center mb-5">
+                        <h2>Our <em>Partners</em></h2>
+                        <span>Trusted automotive brands we work with</span>
+                    </div>
+                </div>
+            </div>
+            <div class="logos-slider">
+                <div class="logos-track">
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=BMW" alt="BMW" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Mercedes" alt="Mercedes-Benz" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Audi" alt="Audi" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Toyota" alt="Toyota" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Honda" alt="Honda" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Ford" alt="Ford" />
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=BMW" alt="BMW" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Mercedes" alt="Mercedes-Benz" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Audi" alt="Audi" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Toyota" alt="Toyota" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Honda" alt="Honda" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="/placeholder.svg?height=80&width=120&text=Ford" alt="Ford" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Updated Get in Touch heading text -->
+    <div style="background: var(--primary-color); padding: 20px 0; text-align: center;">
+        <h2 style="color: white; margin: 0; font-size: 2.5rem;"><em style="color: #fffff;">Get in Touch Today!</em></h2>
+        <p style="color: #ccc; margin: 10px 0 0 0; font-size: 1.1rem;">Your automotive needs are our priority - Contact us for professional service</p>
+    </div>
+
+    <!-- Footer Starts Here -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-item">
+                    <!-- Updated footer content for Redstone Automotives -->
+                    <h4>About Redstone Automotives</h4>
+                    <p>Your trusted partner for comprehensive automotive solutions. We provide quality services with integrity, expertise, and customer satisfaction as our top priorities.</p>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-item">
+                    <h4>Useful Links</h4>
+                    <ul class="menu-list">
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#values">Why Choose Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-item">
+                    <h4>Additional Pages</h4>
+                    <ul class="menu-list">
+                        <li><a href="#">Tire Services</a></li>
+                        <li><a href="#">Battery Solutions</a></li>
+                        <li><a href="#">Spare Parts</a></li>
+                        <li><a href="#">Automotive Recycling</a></li>
+                    </ul>
+                </div>
+                <!-- Replaced sitemap with Our Location that redirects to maps -->
+                <div class="col-md-3 footer-item last-item">
+                    <h4>Our Location</h4>
+                    <div class="location-container" style="text-align: center;">
+                        <a href="https://maps.app.goo.gl/aowbAKQ4jRsjpak29?g_st=aw" target="_blank" style="display: inline-block; text-decoration: none; width: 100%;">
+                            <div class="location-card" style="background: #333; padding: 30px 20px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; border: 2px solid transparent;">
+                                <i class="fa fa-map-marker" style="font-size: 40px; color: var(--primary-color); margin-bottom: 15px; display: block;"></i>
+                                <h5 style="color: white; margin-bottom: 10px; font-size: 16px;">Visit Our Workshop</h5>
+                                <p style="color: #ccc; margin: 0; font-size: 14px; line-height: 1.4;">Click to view our location<br>on Google Maps</p>
+                                <div style="margin-top: 15px; padding: 8px 16px; background: var(--primary-color); border-radius: 5px; display: inline-block;">
+                                    <span style="color: white; font-size: 12px; font-weight: 500;">GET DIRECTIONS</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        <!-- Updated copyright for Redstone Automotives -->
+                        Copyright &copy; 2024 Redstone Automotives Co., Ltd.
+                        - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Added WhatsApp widget -->
+    <a href="https://wa.me/1234567890?text=Hello%20Redstone%20Automotives,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+       class="whatsapp-widget"
+       target="_blank"
+       rel="noopener noreferrer">
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+        <span class="whatsapp-text">Chat with us</span>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/jquery.singlePageNav.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script>
+        $(function () {
+            $('#navbarResponsive').singlePageNav({
+                'offset': 100,
+                'filter': ':not(.external)'
+            });
+            $('#navbarResponsive .nav-link').click(function () {
+                $('#navbarResponsive').removeClass('show');
+            });
+        });
+    </script>
+
+    <script>
+        var cleared = [];
+        cleared[0] = cleared[1] = cleared[2] = 0;
+        function clearField(t) {
+            if (!cleared[t.id]) {
+                cleared[t.id] = 1;
+                t.value = '';
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
+</body>
+</html>
