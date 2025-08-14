@@ -379,7 +379,7 @@ header .navbar {
   padding: 0;
 }
 
-.Modern-Slider .item .img-fill {
+/*.Modern-Slider .item .img-fill {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -396,6 +396,33 @@ header .navbar {
 
 .Modern-Slider .item-3 .img-fill {
 	background-image: url(../images/slide_03.jpg);
+}*/
+
+.Modern-Slider .item .img-fill {
+	/*	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;*/
+	height: 95vh;
+	position: relative; /* needed for absolute positioning of video */
+	overflow: hidden;
+}
+
+.Modern-Slider .item-1 .img-fill video {
+	width: 100%;
+	height: 90%;
+	object-fit: cover; /* keeps aspect ratio and fills the slide */
+	/*	display: block;*/
+}
+
+@media (max-width: 768px) {
+	.Modern-Slider .item-1 .img-fill {
+		height: auto; /* let height adjust based on video ratio */
+	}
+
+		.Modern-Slider .item-1 .img-fill video {
+			/*object-fit: contain;*/ /* show whole video */
+			height: auto;
+		}
 }
 
 .Modern-Slider .NextArrow{
@@ -550,7 +577,7 @@ ul.slick-dots {
 /* Services */
 
 .services {
-	margin-top: 140px;
+	margin-top: 70px;
 }
 
 .service-item img {
@@ -643,7 +670,7 @@ ul.slick-dots {
 /* More Info */
 
 .more-info {
-	margin-top: 140px;
+	margin-top: 90px;
 }
 
 .more-info .left-image img {
